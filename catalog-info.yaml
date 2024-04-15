@@ -1,0 +1,35 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "my-python-application-1505"
+  description: "my-python-application-1505"
+
+  links:
+    - url: https://github.com/RohanAwasthi/my-python-application-1505
+      title: "my-python-application-1505"
+      icon: code
+
+  labels:
+    system: web-apps
+    environmentname: my-python-env-1505
+
+  tags:
+    - python
+    - aws
+    - "applicationtype-webapplication"
+
+  annotations:
+    # add elastic beanstalk annotation
+    jenkins.io/github-folder: 'custom-actions/tf-my-python-application-1505'
+    github.com/project-slug: RohanAwasthi/my-python-application-1505
+    dev.azure.com/project: 'SDAFY24'
+    dev.azure.com/build-definition: 'ey-org.devexplatform'
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/linguist: https://github.com/ItRachii/ebs-sample-python-application
+    sonarqube.org/project-key: 'python-app/aws-elb-python'
+
+spec:
+  type: service
+  lifecycle: experimental
+  system: elasticbeanstalk
+  owner: "EY"
